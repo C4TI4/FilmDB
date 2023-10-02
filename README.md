@@ -1,7 +1,7 @@
 # FilmDB
 Database for films and TV shows 
 
-# $> Project requirements:
+# Project requirements:
 The actual theme for your frontend is of your choice. It can be a blog, a movie catalogue, a library, etc.<br>
 You need to use [Contentful](https://www.contentful.com/) (or another CMS of your choice ie. Strapi) to create and model your data. Think about what kinds of entities you need to have (ie. a blog could have posts, and authors), and what kind of data is relevant to these entities (a blog post should have a title, description, publish date, etc...)<br>
 That data will be used to fill your page! Fetching from Contentful is best done with the [Contentful library](https://www.npmjs.com/package/contentful)
