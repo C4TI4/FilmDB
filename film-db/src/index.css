@@ -1,8 +1,5 @@
 @tailwind base;
 @tailwind components;
-<<<<<<< HEAD
-@tailwind utilities;
-=======
 @tailwind utilities;
 
 :root {
@@ -79,4 +76,3 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
->>>>>>> bdadedfc72b712865576ec0e929c2040d4ff8a65
