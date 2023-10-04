@@ -24,6 +24,6 @@ The examples from the demo are up on our repo already :3
 Little overview on the [concept of headless CMS](https://www.youtube.com/watch?v=c_8cplBi_gE) again (watch only the first couple minutes. He goes into a specific CMS called Sanity, and it might just get you confused 😉 )
 Here's some info on handling [environmental variables](https://vitejs.dev/guide/env-and-mode.html) and here some [more](https://vitejs.dev/guide/env-and-mode.html#env-files), from Vite's documentation.
 
-Wireframe :<br>
+[Wireframe](https://www.canva.com/design/DAFwTpaNxXw/nqzQmUge-3ZLV9eQj4bveA/edit)<br>
 Trello :<br>
 Deployed Site :<br>
