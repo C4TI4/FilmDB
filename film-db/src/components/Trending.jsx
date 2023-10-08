@@ -42,20 +42,31 @@
 
 // export default ControlledCarousel;
 
+import FilmCard from './FilmCard';
 
-
-function TrendingCarousel() {
+const Trending = ({ allFilms }) => {
   return (
-    <>
-        <Container>
+    <section id='films'>
+      <h1 className='text-3xl text-center my-16 mb-10'>
+            Trending         
+      </h1>
+      <div id='filmCards' className='flex flex-wrap gap-4 justify-center p-10'>
+        {allFilms.map((film) => (
+          <FilmCard key={film.id} {...film} />
+        ))}
+        {/* component <FilmCard {...allFilms[0]} />
+        <FilmCard {...allFilms[1]} /> */}
+      </div>
+    </section>
+  );
+};
 
-        </Container>
-    </>
 
-  )
-}
+export default Trending;
 
 
 
+ 
 
-export default TrendingCarousel;
+
+
