@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 
 export default function NavBarItem({name,Icon}) {
   return (
@@ -10,3 +12,9 @@ export default function NavBarItem({name,Icon}) {
     </div>
   )
 }
+
+NavBarItem.propTypes = {
+  name: PropTypes.string.isRequired, 
+  Icon: PropTypes.elementType.isRequired, 
+};
+

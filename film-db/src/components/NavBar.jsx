@@ -1,9 +1,6 @@
-import React, { useState } from 'react'
-import Logo from './../assets/Images/logo.png'
-import { HiHome,
-    HiMagnifyingGlass,
-    HiStar,
-    HiPlayCircle,
+import { useState } from 'react';
+import Logo from './../assets/Images/logo.png';
+import { HiHome, HiMagnifyingGlass, HiStar, HiPlayCircle,
     HiTv } from "react-icons/hi2";
 import { HiPlus,HiDotsVertical } from "react-icons/hi";
 import NavBarItem from './NavBarItem';
@@ -44,19 +41,19 @@ function NavBar() {
         md:w-[115px] object-cover' />
         <div className='hidden md:flex gap-8'>
         {menu.map((item)=>(
-            <NavBarItem key={indexedDB} name={item.name} Icon={item.icon} />
+            <NavBarItem key={index} name={item.name} Icon={item.icon} />
         ))}
         </div>
           <div className='flex md:hidden gap-5'>
         {menu.map((item,index)=>index<3&&(
-            <NavBarItem key={indexedDB} name={''} Icon={item.icon} />
+            <NavBarItem key={index} name={''} Icon={item.icon} />
         ))}
          <div className='md:hidden' onClick={()=>setToggle(!toggle)}>       
-            <NavBarItem key={indexedDB} name={''} Icon={HiDotsVertical} />
+            <NavBarItem key={index} name={''} Icon={HiDotsVertical} />
            {toggle? <div className='absolute mt-3 bg-[#121212] 
             border-[1px] border-gray-700 p-3 px-5 py-4'>
             {menu.map((item,index)=>index>2&&(
-            <NavBarItem key={indexedDB} name= {item.name} Icon={item.icon} />
+            <NavBarItem key={index} name= {item.name} Icon={item.icon} />
             ))}
             </div>:null}
             </div> 
@@ -66,6 +63,7 @@ function NavBar() {
         className='w-[40px] rounded-full'/>
     </div>
   )
+
 }
 
 export default NavBar
