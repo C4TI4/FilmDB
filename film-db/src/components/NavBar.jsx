@@ -7,6 +7,8 @@ import { HiHome,
     HiTv } from "react-icons/hi2";
 import { HiPlus,HiDotsVertical } from "react-icons/hi";
 import NavBarItem from './NavBarItem';
+
+
 function NavBar() {
     const [toggle,setToggle]=useState(false);
     const menu=[
@@ -42,19 +44,19 @@ function NavBar() {
         md:w-[115px] object-cover' />
         <div className='hidden md:flex gap-8'>
         {menu.map((item)=>(
-            <NavBarItem name={item.name} Icon={item.icon} />
+            <NavBarItem key={indexedDB} name={item.name} Icon={item.icon} />
         ))}
         </div>
           <div className='flex md:hidden gap-5'>
         {menu.map((item,index)=>index<3&&(
-            <NavBarItem name={''} Icon={item.icon} />
+            <NavBarItem key={indexedDB} name={''} Icon={item.icon} />
         ))}
          <div className='md:hidden' onClick={()=>setToggle(!toggle)}>       
-            <NavBarItem name={''} Icon={HiDotsVertical} />
+            <NavBarItem key={indexedDB} name={''} Icon={HiDotsVertical} />
            {toggle? <div className='absolute mt-3 bg-[#121212] 
             border-[1px] border-gray-700 p-3 px-5 py-4'>
             {menu.map((item,index)=>index>2&&(
-            <NavBarItem name= {item.name} Icon={item.icon} />
+            <NavBarItem key={indexedDB} name= {item.name} Icon={item.icon} />
             ))}
             </div>:null}
             </div> 
