@@ -7,6 +7,13 @@ import AnimeFilmSection from './AnimeFilmSection';
 
 
 const Trending = ({  }) => {
+const [allMovies, AllMovies] = useState([])
+  // fetch all state and data using fetch or axios
+
+  {allFilms.filter(film => film.genre === 'comedy').map(
+    film => <FilmCard key={film.id} {...film} />
+)}
+
   return (
     <>
     <h1> Trending </h1>
