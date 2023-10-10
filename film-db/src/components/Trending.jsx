@@ -1,65 +1,30 @@
-// import  {Container} from 'react-bootstrap'
 
-// import { useState } from 'react';
-// import Carousel from 'react-bootstrap/Carousel';
-// import ExampleCarouselImage from 'components/ExampleCarouselImage';
+// import FilmCard from './FilmCard';
+import ComedyFilmSection from './ComedyFilmSection';
+import ActionFilmSection from './ActionFilmSection';
+import RomanticFilmSection from './RomanticFilmSection';
+import AnimeFilmSection from './AnimeFilmSection';
 
-// function ControlledCarousel() {
-//   const [index, setIndex] = useState(0);
 
-//   const handleSelect = (selectedIndex) => {
-//     setIndex(selectedIndex);
-//   };
+const Trending = ({  }) => {
+const [allMovies, AllMovies] = useState([])
+  // fetch all state and data using fetch or axios
 
-//   return (
-//     <Carousel activeIndex={index} onSelect={handleSelect}>
-//       <Carousel.Item>
-//         <ExampleCarouselImage text="First slide" />
-//         <Carousel.Caption>
-//           <h3>First slide label</h3>
-//           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-//         </Carousel.Caption>
-//       </Carousel.Item>
-//       <Carousel.Item>
-//         <ExampleCarouselImage text="Second slide" />
-//         <Carousel.Caption>
-//           <h3>Second slide label</h3>
-//           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-//         </Carousel.Caption>
-//       </Carousel.Item>
-//       <Carousel.Item>
-//         <ExampleCarouselImage text="Third slide" />
-//         <Carousel.Caption>
-//           <h3>Third slide label</h3>
-//           <p>
-//             Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-//           </p>
-//         </Carousel.Caption>
-//       </Carousel.Item>
-//     </Carousel>
-//   );
-// }
+  {allFilms.filter(film => film.genre === 'comedy').map(
+    film => <FilmCard key={film.id} {...film} />
+)}
 
-// export default ControlledCarousel;
-
-import FilmCard from './FilmCard';
-
-const Trending = ({ allFilms }) => {
   return (
-    <section id='films'>
-      <h1 className='text-3xl text-center my-16 mb-10'>
-            Trending         
-      </h1>
-      <div id='filmCards' className='flex flex-wrap gap-4 justify-center p-10'>
-        {allFilms.map((film) => (
-          <FilmCard key={film.id} {...film} />
-        ))}
-        {/* component <FilmCard {...allFilms[0]} />
-        <FilmCard {...allFilms[1]} /> */}
-      </div>
-    </section>
-  );
-};
+    <>
+    <h1> Trending </h1>
+    <ComedyFilmSection />
+    <ActionFilmSection />
+    <RomanticFilmSection />
+    <AnimeFilmSection />
+
+    </>
+  )}
+
 
 
 export default Trending;
