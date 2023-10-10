@@ -1,5 +1,5 @@
 
-// // const FilmCard = ({ id, filmName, imgSrc }) => {
+// // const FilmCard = ({ id, filmName, imgSrc, genre }) => {
 //     console.log(id);
 //     return (
 //       <div
@@ -13,7 +13,7 @@
 //           <h2 className='card-title'>
 //            {filmName}
 
-//             {/* {duckName === 'HRM The queen'
+//             {/* {duckName === 'HRM The queen'======rating
 //               ? `I am The queen! Tell me of your struggles, peasant.`
 //               : `My name is ${duckName}! Do you need my help with debugging?`} */}
 //           </h2>
