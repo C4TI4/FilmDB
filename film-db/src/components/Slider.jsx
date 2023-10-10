@@ -1,6 +1,15 @@
 import { useState, useEffect, useCallback } from "react";
 import { client } from "../lib/contentfulClient";
 import Carousel from "./Carousel";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+import SwiperCore from "swiper";
+
+import "swiper/scss";
+import "swiper/scss/navigation";
+import "swiper/scss/pagination";
+
+SwiperCore.use([Navigation]);
 
 const Slider = () => {
   const [isCarouselLoading, setIsCarouselLoading] = useState(false);
@@ -42,19 +51,25 @@ const Slider = () => {
   useEffect(() => {
     getCarouselSlides();
   }, [getCarouselSlides]);
+
   return (
     <>
-      {carouselSlides.map((item) => {
-        const { id, slideBg, slideTitle, slideDescription } = item;
-        return (
-          <Carousel
-            key={id}
-            slideTitle={slideTitle}
-            slideDescription={slideDescription}
-            slideBg={slideBg}
-          />
-        );
-      })}
+      <div className="carousel">
+        <Swiper navigation>
+          {carouselSlides.map((item) => {
+            const { id, slideBg, slideTitle, slideDescription } = item;
+            return (
+              <SwiperSlide key={id}>
+                <Carousel
+                  slideTitle={slideTitle}
+                  slideDescription={slideDescription}
+                  slideBg={slideBg}
+                />
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+      </div>
     </>
   );
 };

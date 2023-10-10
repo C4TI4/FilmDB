@@ -3,7 +3,7 @@
 
 const Carousel = (props) => {
   //   const [carouselSlides, setCarouselSlides] = useState([]);
-  const { id, slideTitle, slideDescription, slideBg } = props;
+  const { slideTitle, slideDescription, slideBg } = props;
   return (
     <>
       <div className="slideWrap" style={{ backgroundImage: `url(${slideBg})` }}>
