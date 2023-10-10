@@ -1,4 +1,3 @@
-// import * as contentful from "contentful";
 
 import { createClient } from "contentful";
 
@@ -15,3 +14,7 @@ export const client = createClient({
 //     const entries = await client.getEntries();
 //     console.log(entries)
 // }
+
+
+export default client;
+
