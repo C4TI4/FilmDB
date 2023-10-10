@@ -1,14 +1,17 @@
-import { useState, useEffect } from "react";
+
+import FilmCard from "./FilmCard";
 import FilmCarousel from "./FilmCarousel";
 
-  const ComedyFilmSection = ({ allFilms }) => {
+  const ComedyFilmSection = ({films}) => {
     
     return (
-   
-   <FilmCarousel
-    {allFilms.filter(film => film.genre === 'comedy').map(
-      film => <FilmCard key={film.id} {...film} />
-   )}/>
+      films.length &&
+   <FilmCarousel>
+    { films.filter(film =>film.fields.genre === 'comedy').map(
+      film =><div className='carousel-image' key={crypto.randomUUID()}>
+        <FilmCard  {...film}/></div>
+   )}
+   </FilmCarousel>
     // <section id='films'>
     //   <h1 className='text-3xl text-center my-16 mb-10'>
     //         Comedy         

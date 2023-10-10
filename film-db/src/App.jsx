@@ -1,7 +1,7 @@
-import { useState,useEffect, useCallback } from 'react';
+import { useState,useEffect} from 'react';
 import './App.css';
 import NavBar from './components/NavBar';
-// import Trending from './components/Trending';
+import Trending from './components/Trending';
 // import SingleFilmPg3 from './components/SingleFilmPg3 ';
 
 import  client  from './lib/contentfulClient';
@@ -12,11 +12,11 @@ import 'react-multi-carousel/lib/styles.css';
 
 const App = () => {
   // const [CarouselLoading, setCarouselLoading]= useState(false)
-  const [slides, setSlides] = useState([])
+  const [films, setFilms] = useState([])
   // null or array?
 
   // if useCallback function is not used, u get warnings in code
-  const getSlides = useCallback( async () => {
+  const getSlides =async () => {
     try {
       const response = await client.getEntries({
         content_type: 'filmCard',
@@ -25,7 +25,9 @@ const App = () => {
       // .getEntries() is a method to get all entries
   
       // content-type is id of filmCard---u find copy id beside it in contentful
-      const responseData = response.items
+      const responseData = response.items;
+      
+      setFilms(responseData)
       // in browser console when u expand array, u find items which u need to get
       console.log(responseData);
       // u will not see console from browser. u need use useEffect. 
@@ -33,11 +35,11 @@ const App = () => {
     } catch (error) {
       console.error(error.message);
     }
-  }, [])
+  }
 
   useEffect(() => {
     getSlides()
-  }, [getSlides])
+  }, [])
   
 
 //   useEffect(() => {
@@ -67,7 +69,7 @@ const App = () => {
     <div className=''>
       <NavBar /> 
 
-      {/* <Trending  allFilms={allFilms}/>  */}
+      <Trending  films={films}/> 
       {/* <SingleFilmPg3/> */}
 
     </div>
