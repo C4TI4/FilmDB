@@ -1,16 +1,16 @@
-import {StrictMode} from 'react';
+
+import ReactDOM from "react-dom/client";
 import {createRoot} from 'react-dom/client';
-import './index.css';
-import App from './App.jsx';
+import App from "./App.jsx";
+import "./index.css";
+import "./styles.scss";
 import { NextUIProvider } from "@nextui-org/react";
 
+ReactDom.createRoot(document.getElementById('root')).render(
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
   <NextUIProvider>
     <main className="light text-foreground bg-background">
       <App />
     </main>
   </NextUIProvider>
-</StrictMode>,
-)
+);
