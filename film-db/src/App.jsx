@@ -1,16 +1,14 @@
-// import { useState } from 'react';
 import "./App.css";
 import NavBar from "./components/NavBar";
-// import getData from './Hooks/useContentful';
-import Slider from "./components/Slider";
+// import getData from "./Hooks/useContentful";
+import LandingPage from "./pages/LandingPage";
 
 function App() {
-  // const [count, setCount] = useState(0)
-  // getData()
+  // getData();
   return (
     <div className="">
       <NavBar />
-      <Slider />
+      <LandingPage />
     </div>
   );
 }

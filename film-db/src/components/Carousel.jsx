@@ -1,8 +1,6 @@
 /* eslint-disable react/prop-types */
-// import { useState } from "react";
 
 const Carousel = (props) => {
-  //   const [carouselSlides, setCarouselSlides] = useState([]);
   const { slideTitle, slideDescription, slideBg } = props;
   return (
     <>
