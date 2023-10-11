@@ -4,24 +4,18 @@ const FilmCard = ({film} ) => {
     console.log(film);
     // console.log(filmName,imageSrc,year, genre);
     return (
-      <div className='card w-96 bg-gray-900 h-[32rem] hover:scale-[1.02] hover:cursor-pointer transition-all'
+
+        // card-body gap-6 text-center
+        <div className='mx-2 my-5 card w-99 bg-gray-900 h-[32rem] hover:scale-[1.02] hover:cursor-pointer transition-all'
             onClick={()=>{}} >
-                Hello
-                <div>{fields?.filmName}</div>
+                
+                <figure className='h-[70%] overflow-hidden'>
+                        <img src={fields?.imageSrc} alt='film-poster' className='object-cover' />
+                </figure>             
+                <h2 className='card-title'>{fields?.filmName}</h2>
                 <div>{fields?.genre}</div>
-                <img src={fields?.imageSrc} alt='film-poster' className='object-cover' />
-                <div>{fields?.year}</div>
-            {/* <figure className='h-[70%] overflow-hidden'>
-                <img src={imageSrc} alt='film-poster' className='object-cover' />
-            </figure>
-            <div className='card-body gap-6 text-center'>
-                <h2 className='card-title'>
-                {filmName&&filmName}
-                </h2>            
-                <p>{year}</p>
-            </div> */}
-       </div>
-    );
-  };
+                <p>{fields?.year}</p>                
+        </div> 
+    )}    
 
   export default FilmCard
