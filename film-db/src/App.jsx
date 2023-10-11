@@ -32,11 +32,11 @@ const App = () => {
 
   useEffect(() => {getSlides()
   }, [])
-  
+ 
  return (
     <div className=''>
        <LandingPage />
-      <Trending  films={films}/> 
+      {films.length>0 && <Trending  films={films}/> }
       {/* <SingleFilmPg3/> */}
     </div>
   );

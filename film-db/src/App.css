@@ -1,5 +1,7 @@
 .carousel-image {
 
-  width: 250px;
+  width: 350px;
   height: 200px;
+  
 }
+.react-multiple-carousel__arrow--right::before {color: orange;}
