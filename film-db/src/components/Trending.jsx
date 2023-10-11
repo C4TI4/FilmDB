@@ -13,12 +13,21 @@ const Trending = ({ films }) => {
   // )}
 
   return (
+    films.length && 
     <>
+<<<<<<< HEAD
       <h1> Trending </h1>
       <ComedyFilmSection films={films} />
       {/* <ActionFilmSection {...films}/>
     <RomanticFilmSection {...films}/>
     <AnimeFilmSection {...films}/> */}
+=======
+      <ComedyFilmSection films={films} />
+      {/* <ActionFilmSection {...films}/> */}
+      <ActionFilmSection films={films}/>
+      <RomanticFilmSection films={films}/>
+      <AnimeFilmSection films={films}/>
+>>>>>>> bc5515054412bc8c92178e44331b525c66dd9931
     </>
   );
 };
