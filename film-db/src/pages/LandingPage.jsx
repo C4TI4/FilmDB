@@ -3,9 +3,10 @@ import NavBar from '../components/NavBar';
 
 const LandingPage = () => {
   return(
-    <NavBar />,
-     <Slider />
-     
+    <>
+      <NavBar />
+      <Slider />
+    </>
 )};
 
 export default LandingPage;

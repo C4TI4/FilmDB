@@ -16,13 +16,11 @@ const Trending = ({films}) => {
   return (
     films.length && 
     <>
-    <h1> Trending </h1>
-    <ComedyFilmSection films={films} />
-    {/* <ActionFilmSection {...films}/> */}
-    <ActionFilmSection films={films}/>
-    <RomanticFilmSection films={films}/>
-    <AnimeFilmSection films={films}/>
-
+      <ComedyFilmSection films={films} />
+      {/* <ActionFilmSection {...films}/> */}
+      <ActionFilmSection films={films}/>
+      <RomanticFilmSection films={films}/>
+      <AnimeFilmSection films={films}/>
     </>
   )}
 
