@@ -1,13 +1,12 @@
 
 import { useState,useEffect} from 'react';
 import './App.css';
-import NavBar from './components/NavBar';
-import Trending from './components/Trending';
+import TrendingPage from './pages/TrendingPage';
+import LandingPage from "./pages/LandingPage";
 // import SingleFilmPg3 from './components/SingleFilmPg3 ';
 import  client  from './lib/contentfulClient';
 // FilmCard is collection of all films in contentful
 import 'react-multi-carousel/lib/styles.css';
-import LandingPage from "./pages/LandingPage";
 
 const App = () => {
     // const [CarouselLoading, setCarouselLoading]= useState(false)
@@ -32,11 +31,11 @@ const App = () => {
 
   useEffect(() => {getSlides()
   }, [])
- 
- return (
+  
+return (
     <div className=''>
-       <LandingPage />
-      {films.length>0 && <Trending  films={films}/> }
+      <LandingPage />
+      <TrendingPage films={films}/> 
       {/* <SingleFilmPg3/> */}
     </div>
   );

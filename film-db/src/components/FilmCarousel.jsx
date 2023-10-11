@@ -1,9 +1,8 @@
 import Carousel from 'react-multi-carousel';
 
 const FilmCarousel = ({children}) => {
-
   return (
-    <div style= {{width: '100vw', height : '20vh', marginBottom: '20px'}}>
+    <div style={{width: '100vw', height : '20vh', marginBottom: '20px'}}>
       <Carousel 
       cols={3} rows={1} gap={1} loop
         swipeable={false}
@@ -31,7 +30,6 @@ const FilmCarousel = ({children}) => {
             items: 1
           }
         }}
-
         draggable={false}
         centerMode= {true}
         arrows={true}
