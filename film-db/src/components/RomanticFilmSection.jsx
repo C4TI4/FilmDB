@@ -8,7 +8,7 @@ import FilmCarousel from "./FilmCarousel";
       setFilteredFilms(films?.filter(film =>film.fields.genre === 'romantic'))
     
     }, [films])
-    
+    console.log(filteredFilms);
     return (
       films.length > 0 &&
       <FilmCarousel>

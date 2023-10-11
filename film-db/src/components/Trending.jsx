@@ -14,6 +14,7 @@ const Trending = ({films}) => {
       // )}
 
   return (
+    films.length && 
     <>
     <h1> Trending </h1>
     <ComedyFilmSection films={films} />
