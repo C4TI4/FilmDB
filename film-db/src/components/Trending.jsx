@@ -6,21 +6,21 @@ import RomanticFilmSection from './RomanticFilmSection';
 import AnimeFilmSection from './AnimeFilmSection';
 
 
-const Trending = ({  }) => {
-const [allMovies, AllMovies] = useState([])
-  // fetch all state and data using fetch or axios
+const Trending = ({films}) => {
 
-  {allFilms.filter(film => film.genre === 'comedy').map(
-    film => <FilmCard key={film.id} {...film} />
-)}
+  // fetch all state and data using fetch or axios
+      //   {allFilms.filter(film => film.genre === 'comedy').map(
+      //     film => <FilmCard key={film.id} {...film} />
+      // )}
 
   return (
     <>
     <h1> Trending </h1>
-    <ComedyFilmSection />
-    <ActionFilmSection />
-    <RomanticFilmSection />
-    <AnimeFilmSection />
+    <ComedyFilmSection films={films} />
+    {/* <ActionFilmSection {...films}/> */}
+    <ActionFilmSection films={films}/>
+    <RomanticFilmSection films={films}/>
+    <AnimeFilmSection films={films}/>
 
     </>
   )}
