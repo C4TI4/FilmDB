@@ -4,7 +4,7 @@ const FilmCarousel = ({children}) => {
 
   return (
     <div style= {{width: '80vw'}}>
-      <Carousel cols={3} rows={1} gap={5} loop
+      <Carousel cols={3} rows={1} gap={10} loop
         swipeable={false}
         responsive={
           {desktop: {
