@@ -4,6 +4,7 @@ import ComedyFilmSection from '../components/ComedyFilmSection';
 import ActionFilmSection from '../components/ActionFilmSection';
 import RomanticFilmSection from '../components/RomanticFilmSection';
 import AnimeFilmSection from '../components/AnimeFilmSection';
+import NavBar from '../components/NavBar';
 
 
 const Trending = ({  }) => {
@@ -16,6 +17,7 @@ const [allMovies, AllMovies] = useState([])
 
   return (
     <>
+    <NavBar />
     <h1> Trending </h1>
     <ComedyFilmSection />
     <ActionFilmSection />

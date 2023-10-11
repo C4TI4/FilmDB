@@ -1,7 +1,10 @@
-import Slider from "../components/Slider";
+import Slider from '../components/Slider';
+import NavBar from '../components/NavBar';
 
 const LandingPage = () => {
-  return <Slider />;
-};
+  return(
+    <NavBar />,
+     <Slider />
+)};
 
 export default LandingPage;

@@ -1,7 +1,6 @@
 
 import { useState,useEffect} from 'react';
 import './App.css';
-import NavBar from './components/NavBar';
 import Trending from './components/Trending';
 // import SingleFilmPg3 from './components/SingleFilmPg3 ';
 import  client  from './lib/contentfulClient';
@@ -33,9 +32,9 @@ const App = () => {
   useEffect(() => {getSlides()
   }, [])
   
- return (
+return (
     <div className=''>
-       <LandingPage />
+      <LandingPage />
       <Trending  films={films}/> 
       {/* <SingleFilmPg3/> */}
     </div>
