@@ -8,13 +8,6 @@ const client = createClient({
   accessToken: import.meta.env.VITE_ACCESS_TOKEN,
 })
 
-export default async function getData() { 
-    const entries = await client.getEntries();
-    console.log(entries)
-}
-
-
-// export { getSlides };
 
 export default client;
 
