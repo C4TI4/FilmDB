@@ -12,7 +12,7 @@ const TrendingPage = ({ films }) => {
   return (
     <>
       {/* <NavBar /> */}
-      <h1>Trending</h1>
+      <h1 className='text-4xl font-bold'>Trending</h1>
       <Trending films={films} />
     </>
   )

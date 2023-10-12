@@ -1,6 +1,5 @@
 
 import { useState,useEffect} from 'react';
-import './App.css';
 import TrendingPage from './pages/TrendingPage';
 import LandingPage from "./pages/LandingPage";
 // import SingleFilmPg3 from './components/SingleFilmPg3 ';
