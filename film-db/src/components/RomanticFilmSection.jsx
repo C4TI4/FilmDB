@@ -15,7 +15,7 @@ const RomanticFilmSection = ({films}) => {
         filteredFilms.length >0 &&
         <>
           <div>
-            <h2>Romantic</h2>
+            <h2 className='text-3xl font-bold'>Romance</h2>
             <FilmCarousel>
               {filteredFilms?.map(film =>          
                   <FilmCard key={crypto.randomUUID()} film={film}/>          
