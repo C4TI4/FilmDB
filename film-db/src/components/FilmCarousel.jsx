@@ -4,7 +4,6 @@ import Carousel from "react-multi-carousel";
 
 const FilmCarousel = ({ children }) => {
   return (
-    <div style= {{width: '100%', height : '100%',}}>  
       <Carousel 
       cols={3} rows={1} gap={1} loop
         swipeable={false}
@@ -18,11 +17,11 @@ const FilmCarousel = ({ children }) => {
           superLargeDesktop: {
             // the naming can be any, depends on you.
             breakpoint: { max: 4000, min: 3000 },
-            items: 5
+            items: 7
           },
           desktop: {
             breakpoint: { max: 3000, min: 1024 },
-            items: 3
+            items: 5
           },
           tablet: {
             breakpoint: { max: 1024, min: 464 },
@@ -42,10 +41,8 @@ const FilmCarousel = ({ children }) => {
         //  {false}---if dont want autoplay
         keyBoardControl={true}
         customTransition="all .5"
+        dotListClass='mb-4'
         transitionDuration={500}
-        containerClass="carousel-container"
-        dotListClass="custom-dot-list-style"
-        itemClass="carousel-item-padding-40-px"
       >
         {/* use function to fetch data, DRY, item is each film */}
         {/* <Carousel.item className='carousel-image'>Item 1</Carousel.item> */}
@@ -54,7 +51,6 @@ const FilmCarousel = ({ children }) => {
         <div className='carousel-image'>Item 4</div> */}
         {children}
       </Carousel>
-    </div>
   );
 };
 
