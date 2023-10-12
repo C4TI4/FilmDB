@@ -9,9 +9,12 @@ const ActionFilmSection = ({films}) => {
     films.length && setFilteredFilms(films.filter(film => film.fields.genre === 'action'))  
   }, [films])
     
-  return (
-  filteredFilms.length &&
-    <>
+
+    const carStyle={background:"green", display:"block",marginTop:"300px"}
+    return (
+      films.length > 0 &&
+      <>
+      <div style={carStyle}>
       <h3>Action</h3>
       <FilmCarousel>
         {filteredFilms?.map(film =>
@@ -20,8 +23,9 @@ const ActionFilmSection = ({films}) => {
           </div>
         )}
       </FilmCarousel>
-    </>
-  )
-}
 
-export default ActionFilmSection;
+      </div>
+      </>
+    )
+  }
+export default ActionFilmSection

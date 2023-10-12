@@ -4,14 +4,14 @@ import FilmCarousel from "./FilmCarousel";
 
 const RomanticFilmSection = ({films}) => {
   const [filteredFilms, setFilteredFilms] = useState([])
-    
-  useEffect(() => {
-    films.length && setFilteredFilms(films.filter(film => film.fields.genre === 'romantic'))  
+  
+ useEffect(() => {films.length && setFilteredFilms(films.filter(film => film.fields.genre === 'romantic'))  
   }, [films])
-    
+  console.log(filteredFilms);   
   return (
-  filteredFilms.length &&
+  filteredFilms.length >0 &&
     <>
+    <div>
       <h3>Romantic</h3>
       <FilmCarousel>
         {filteredFilms?.map(film =>
@@ -20,8 +20,12 @@ const RomanticFilmSection = ({films}) => {
           </div>
         )}
       </FilmCarousel>
-    </>
-  )
-}
+
+      </div>
+      </>
+    )
+  }
+
+
 
 export default RomanticFilmSection;

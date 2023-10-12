@@ -20,8 +20,11 @@ const AnimeFilmSection = ({films}) => {
           </div>
         )}
       </FilmCarousel>
-    </>
-  )
-}
+
+            </div>
+            </>
+    )
+  }
+
 
 export default AnimeFilmSection;

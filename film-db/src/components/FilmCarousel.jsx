@@ -1,27 +1,10 @@
-<<<<<<< HEAD
+
 /* eslint-disable react/prop-types */
 import Carousel from "react-multi-carousel";
 
 const FilmCarousel = ({ children }) => {
   return (
-    <div style={{ width: "80vw" }}>
-      <Carousel
-        cols={3}
-        rows={1}
-        gap={5}
-        loop
-        swipeable={false}
-        responsive={{
-          desktop: {
-            breakpoint: { max: 800, min: 460 },
-            items: 3,
-          },
-=======
-import Carousel from 'react-multi-carousel';
-
-const FilmCarousel = ({children}) => {
-  return (
-    <div style={{width: '100vw', height : '20vh', marginBottom: '20px'}}>
+    <div style= {{width: '100%', height : '100%',}}>  
       <Carousel 
       cols={3} rows={1} gap={1} loop
         swipeable={false}
@@ -31,7 +14,8 @@ const FilmCarousel = ({children}) => {
           //     items: 3
           //     }
           // }}
-         {superLargeDesktop: {
+         {
+          superLargeDesktop: {
             // the naming can be any, depends on you.
             breakpoint: { max: 4000, min: 3000 },
             items: 5
@@ -48,7 +32,6 @@ const FilmCarousel = ({children}) => {
             breakpoint: { max: 464, min: 0 },
             items: 1
           }
->>>>>>> bc5515054412bc8c92178e44331b525c66dd9931
         }}
         draggable={false}
         centerMode= {true}
