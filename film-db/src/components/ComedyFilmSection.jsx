@@ -14,7 +14,7 @@ const ComedyFilmSection = ({films}) => {
   return (
   filteredFilms?.length > 0 &&
     <>
-    <div style={{ backgroundColor: "red", display:"block", minHeight:"300px"}}>
+    <div style={{ backgroundColor: "red", display:"block", minHeight:"300px"}}>    
       <h3>Comedy</h3>
       <FilmCarousel>
         {filteredFilms?.map(film =>
@@ -23,7 +23,9 @@ const ComedyFilmSection = ({films}) => {
           </div>
         )}
       </FilmCarousel>
+
         </div>
+
     </>
   )
 }

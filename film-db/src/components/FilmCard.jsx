@@ -1,6 +1,8 @@
 
-const FilmCard = ({film} ) => {
-    const {fields}=film
+/* eslint-disable react/prop-types */
+
+const FilmCard = ({ film }) => {
+  const { fields } = film;  
     // console.log(filmName,imageSrc,year, genre);
     const imgStyle= {
         backgroundImage:`url(${fields?.imageSrc})`, 
@@ -10,10 +12,10 @@ const FilmCard = ({film} ) => {
         backgroundSize:"contain",
     }
     return (
-
         // card-body gap-6 text-center
+
         <div className='mx-2 my-5 card w-99 bg-gray-900 min-h-[32rem] hover:scale-[1.02] hover:cursor-pointer transition-all'
-            onClick={()=>{}} >
+            onClick={()=>{}} >         
                 <h2 className='card-title'>{fields?.filmName}</h2>
                 <div>{fields?.genre}</div>
                 <p>{fields?.year}</p>  
@@ -26,4 +28,5 @@ const FilmCard = ({film} ) => {
         </div> 
     )}    
 
-  export default FilmCard
+
+export default FilmCard;
