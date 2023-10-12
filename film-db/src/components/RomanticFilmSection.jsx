@@ -9,6 +9,7 @@ import FilmCarousel from "./FilmCarousel";
     
     }, [films])
     console.log(filteredFilms);
+    
     return (
       films.length > 0 &&
       <>
