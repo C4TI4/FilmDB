@@ -10,18 +10,19 @@ const AnimeFilmSection = ({films}) => {
   }, [films])
     
   return (
-  filteredFilms.length &&
-    <>
-      <h3>Anime</h3>
-      <FilmCarousel>
-        {filteredFilms?.map(film =>
-          <div className='carousel-image' key={crypto.randomUUID()}>
-            <FilmCard film={film}/>
-          </div>
-        )}
-      </FilmCarousel>
-    </>
+    filteredFilms?.length >0 &&
+      <>
+        <div>
+        <h2 className='text-3xl font-bold'>Anime</h2>
+        <FilmCarousel>
+          {filteredFilms?.map(film =>          
+              <FilmCard key={crypto.randomUUID()} film={film}/>         
+          )}
+        </FilmCarousel> 
+        </div>         
+      </>
   )
 }
+
 
 export default AnimeFilmSection;

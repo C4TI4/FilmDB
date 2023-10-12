@@ -8,19 +8,20 @@ const ComedyFilmSection = ({films}) => {
   useEffect(() => {
     films.length && setFilteredFilms(films.filter(film => film.fields.genre === 'comedy'))  
   }, [films])
-    
+
   return (
-  filteredFilms.length &&
-    <>
-      <h3>Comedy</h3>
-      <FilmCarousel>
-        {filteredFilms?.map(film =>
-          <div className='carousel-image' key={crypto.randomUUID()}>
-            <FilmCard film={film}/>
-          </div>
-        )}
-      </FilmCarousel>
-    </>
+    filteredFilms?.length > 0 &&
+      <>
+        {/* <div style={{ backgroundColor: "red", minHeight:"300px"}}>  */}
+        <div>   
+          <h2 className='text-3xl font-bold'>Comedy</h2>
+          <FilmCarousel>
+            {filteredFilms?.map(film =>
+              <FilmCard key={crypto.randomUUID()} film={film}/>
+            )}
+          </FilmCarousel>
+        </div>
+      </>
   )
 }
 

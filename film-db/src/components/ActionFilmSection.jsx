@@ -3,25 +3,25 @@ import FilmCard from "./FilmCard";
 import FilmCarousel from "./FilmCarousel";
 
 const ActionFilmSection = ({films}) => {
-  const [filteredFilms, setFilteredFilms] = useState([])
-    
-  useEffect(() => {
-    films.length && setFilteredFilms(films.filter(film => film.fields.genre === 'action'))  
-  }, [films])
-    
-  return (
-  filteredFilms.length &&
-    <>
-      <h3>Action</h3>
-      <FilmCarousel>
-        {filteredFilms?.map(film =>
-          <div className='carousel-image' key={crypto.randomUUID()}>
-            <FilmCard film={film}/>
-          </div>
-        )}
-      </FilmCarousel>
-    </>
-  )
-}
+    const [filteredFilms, setFilteredFilms] = useState([])
+      
+    useEffect(() => {
+      films.length && setFilteredFilms(films.filter(film => film.fields.genre === 'action'))  
+    }, [films])      
 
-export default ActionFilmSection;
+    // const carStyle={background:"green", display:"block",marginTop:"300px"}
+    return (
+      filteredFilms?.length > 0 &&
+      <>
+        <div>
+        <h2 className='text-3xl font-bold'>Action</h2>
+        <FilmCarousel>
+          {filteredFilms?.map(film =>          
+              <FilmCard key={crypto.randomUUID()} film={film}/>         
+          )}
+        </FilmCarousel>
+        </div>
+      </>
+    )
+  }
+export default ActionFilmSection
