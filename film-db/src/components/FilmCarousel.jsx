@@ -1,9 +1,10 @@
-import Carousel from 'react-multi-carousel';
 
-const FilmCarousel = ({children}) => {
+/* eslint-disable react/prop-types */
+import Carousel from "react-multi-carousel";
 
+const FilmCarousel = ({ children }) => {
   return (
-    <div style= {{width: '100%', height : '100%',}}>
+    <div style= {{width: '100%', height : '100%',}}>  
       <Carousel 
       cols={3} rows={1} gap={1} loop
         swipeable={false}
@@ -32,21 +33,20 @@ const FilmCarousel = ({children}) => {
             items: 1
           }
         }}
-
         draggable={false}
         centerMode= {true}
         arrows={true}
         showDots={true}
         infinite={true}
         autoPlay={false}
-          //  {false}---if dont want autoplay
+        //  {false}---if dont want autoplay
         keyBoardControl={true}
         customTransition="all .5"
         transitionDuration={500}
         containerClass="carousel-container"
         dotListClass="custom-dot-list-style"
         itemClass="carousel-item-padding-40-px"
-        >
+      >
         {/* use function to fetch data, DRY, item is each film */}
         {/* <Carousel.item className='carousel-image'>Item 1</Carousel.item> */}
         {/* <div className='carousel-image'>Item 2</div>
@@ -55,7 +55,7 @@ const FilmCarousel = ({children}) => {
         {children}
       </Carousel>
     </div>
-  )
-}
+  );
+};
 
-export default FilmCarousel
+export default FilmCarousel;
