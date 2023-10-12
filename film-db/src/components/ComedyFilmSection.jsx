@@ -2,22 +2,30 @@ import {useEffect,useState} from 'react'
 import FilmCard from "./FilmCard";
 import FilmCarousel from "./FilmCarousel";
 
-  const ComedyFilmSection = ({films}) => {
-    const [filteredFilms, setFilteredFilms] = useState([])
-    useEffect(() => {
-      setFilteredFilms(films?.filter(film =>film.fields.genre === 'comedy'))
+const ComedyFilmSection = ({films}) => {
+  const [filteredFilms, setFilteredFilms] = useState([])
     
-    }, [films])
-    
-    return (
-      films.length > 0 &&
+  useEffect(() => {
+    films.length && setFilteredFilms(films.filter(film => film.fields.genre === 'comedy'))  
+  }, [films])
+  
+    // const carstyle={background:"red"}
+
+  return (
+  filteredFilms?.length > 0 &&
+    <>
+    <div style={{ backgroundColor: "red", display:"block", minHeight:"300px"}}>
+      <h3>Comedy</h3>
       <FilmCarousel>
-        { filteredFilms?.map(film =>
+        {filteredFilms?.map(film =>
           <div className='carousel-image' key={crypto.randomUUID()}>
-              <FilmCard  film={film}/>
+            <FilmCard film={film}/>
           </div>
-      )}
+        )}
       </FilmCarousel>
-    )
-  }
-export default ComedyFilmSection
+        </div>
+    </>
+  )
+}
+
+export default ComedyFilmSection;

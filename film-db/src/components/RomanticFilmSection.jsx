@@ -11,6 +11,9 @@ import FilmCarousel from "./FilmCarousel";
     console.log(filteredFilms);
     return (
       films.length > 0 &&
+      <>
+      <div>
+
       <FilmCarousel>
         { filteredFilms?.map(film =>
           <div className='carousel-image' key={crypto.randomUUID()}>
@@ -18,6 +21,8 @@ import FilmCarousel from "./FilmCarousel";
           </div>
       )}
       </FilmCarousel>
+      </div>
+      </>
     )
   }
 

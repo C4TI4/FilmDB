@@ -9,8 +9,12 @@ import FilmCarousel from "./FilmCarousel";
     
     }, [films])
     
+    const carStyle={background:"green", display:"block",marginTop:"300px"}
     return (
       films.length > 0 &&
+      <>
+      <div style={carStyle}>
+<h2>Action</h2>
       <FilmCarousel>
         { filteredFilms?.map(film =>
           <div className='carousel-image' key={crypto.randomUUID()}>
@@ -18,6 +22,8 @@ import FilmCarousel from "./FilmCarousel";
           </div>
       )}
       </FilmCarousel>
+      </div>
+      </>
     )
   }
 export default ActionFilmSection
