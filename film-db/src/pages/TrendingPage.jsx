@@ -11,9 +11,11 @@ const TrendingPage = ({ films }) => {
 
   return (
     <>
-      {/* <NavBar /> */}
-      <h1 className='text-4xl font-bold'>Trending</h1>
+      <div className='bg-black text-white' >
+      {/* <NavBar />  no need to write this as u placed Navbar outside Routers in App.jsx } */}
+      <h1 className='text-6xl font-bold'>Trending</h1>
       <Trending films={films} />
+      </div>
     </>
   )
 }

@@ -14,7 +14,7 @@ const ComedyFilmSection = ({films}) => {
       <>
         {/* <div style={{ backgroundColor: "red", minHeight:"300px"}}>  */}
         <div>   
-          <h2>Comedy</h2>
+          <h2 className='text-3xl font-bold'>Comedy</h2>
           <FilmCarousel>
             {filteredFilms?.map(film =>
               <FilmCard key={crypto.randomUUID()} film={film}/>
