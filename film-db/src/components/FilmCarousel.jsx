@@ -1,7 +1,7 @@
 
 /* eslint-disable react/prop-types */
 import Carousel from "react-multi-carousel";
-
+// .react-multi-carousel-dot button---to make dots have white color
 const FilmCarousel = ({ children }) => {
   return (
       <Carousel 

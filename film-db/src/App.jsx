@@ -8,7 +8,7 @@ import SignUpPage from './pages/SignUpPage';
 import NotFound from './pages/NotFound.jsx';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
-// import SingleFilmPg3 from './components/SingleFilmPg3 ';
+// import SingleFilmPage3 from './pages/SingleFilmPage3 ';
 import client from "./lib/contentfulClient";
 // FilmCard is collection of all films in contentful
 import 'react-multi-carousel/lib/styles.css';
@@ -47,6 +47,8 @@ return (
   <Route path='*' element={<NotFound />} /> 
   <Route path='login' element={<LoginPage />}/>
   <Route path='signup' element= {<SignUpPage/>}/>
+  {/* <Route path='/:filmname' element= {<SingleFilmPage3/>}/> */}
+   
 </Routes>
 <Footer/>
   </>

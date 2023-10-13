@@ -1,6 +1,6 @@
 // import FilmCard from './FilmCard';
 import Trending from '../components/Trending'
-import { useNavigate } from "react-router-dom";
+
 // import NavBar from '../components/NavBar';
 
 const TrendingPage = ({ films }) => {
@@ -10,12 +10,7 @@ const TrendingPage = ({ films }) => {
 //     film => <FilmCard key={film.id} {...film} />
 // )}
 
-const navigate = useNavigate();
 
-const handleClick = () => {
-  navigate("trending");
-  setUser(!user);
-};
 
   return (
     <>

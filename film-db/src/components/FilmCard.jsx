@@ -1,3 +1,6 @@
+// import { Link} from 'react-router-dom';
+
+// import { Diversity1 } from "@mui/icons-material";
 
 /* eslint-disable react/prop-types */
 
@@ -14,7 +17,9 @@ const FilmCard = ({ film }) => {
     return (
         // card-body gap-6 text-center
 
-        <div className='mx-4 mt-10 mb-16 hover:cursor-pointer hover:scale-[102%] transition-all duration-300 text-center'>         
+        // <Link to={`/${fields?.filmName}`}
+    <div
+        className='mx-4 mt-10 mb-16 hover:cursor-pointer hover:scale-[102%] transition-all duration-300 text-center'>         
                 <figure>
                 {/* <figure className='min-h-[100%] overflow-hidden bg-red' style={imgStyle}> */}
                 {/* <figure className='h-[70%] overflow-hidden bg-red' style={{backgroundImage: `url(${fields?.imageSrc})`}}> */}
@@ -24,7 +29,8 @@ const FilmCard = ({ film }) => {
                 <p className='text-xl text-black font-light'>{fields?.year}</p>  
                 {/* <div className='h-[70%] overflow-hidden bg-red' style={imgStyle}></div> */}
                               
-        </div> 
+    </div>
+                // </link>
     )}    
 
 
