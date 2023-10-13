@@ -11,5 +11,6 @@ export default function NavBarItem({ name, Icon }) {
 
 NavBarItem.propTypes = {
   name: PropTypes.string.isRequired, 
-  Icon: PropTypes.elementType.isRequired, 
+  Icon: PropTypes.elementType.isRequired,
+  onClick: PropTypes.func.isRequired,  
 };
