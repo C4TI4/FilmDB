@@ -2,3 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+.react-multi-carousel-dot--active button {
+    background-color: white;
+}
+
