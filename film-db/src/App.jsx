@@ -3,7 +3,11 @@ import { useState,useEffect} from 'react';
 import {Routes,Route} from "react-router-dom"
 import TrendingPage from './pages/TrendingPage';
 import LandingPage from "./pages/LandingPage";
+import LoginPage from './pages/LoginPage';
+import SignUpPage from './pages/SignUpPage';
+import NotFound from './pages/NotFound.jsx';
 import NavBar from './components/NavBar';
+import Footer from './components/Footer';
 // import SingleFilmPg3 from './components/SingleFilmPg3 ';
 import client from "./lib/contentfulClient";
 // FilmCard is collection of all films in contentful
@@ -37,10 +41,14 @@ return (
   <>
   <NavBar/>
   <Routes>
+  {/* <Route path='' element={}/> */}
   <Route path='/' element={<LandingPage />} />
   <Route path='/trending' element={<TrendingPage films={films} />} />   
-  {/* <Route path='*' element={<NotFound />} /> */}
+  <Route path='*' element={<NotFound />} /> 
+  <Route path='login' element={<LoginPage />}/>
+  <Route path='signup' element= {<SignUpPage/>}/>
 </Routes>
+<Footer/>
   </>
   );
 };
