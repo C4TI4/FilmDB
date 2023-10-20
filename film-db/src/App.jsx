@@ -16,11 +16,15 @@ import 'react-multi-carousel/lib/styles.css';
 const App = () => {
   // const [CarouselLoading, setCarouselLoading]= useState(false)
   const [films, setFilms] = useState([]);
+  const [searchQuery, setSearchQuery] = useState('');
+
+  
   // null or array?
   const getSlides = async () => {
     try {
       const response = await client.getEntries({
-        content_type: "filmCard",
+        // content_type: "filmCard",
+        query: searchQuery,
       });
       // .getEntries() is a method to get all entries
       // content_type is id of filmCard---u find copy id beside it in contentful
@@ -35,11 +39,12 @@ const App = () => {
   };
 
   useEffect(() => {getSlides()
-  }, [])
+  }, [searchQuery])
+  console.log(films)
   
 return (
   <>
-  <NavBar/>
+  <NavBar searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>
   <Routes>
   {/* <Route path='' element={}/> */}
   <Route path='/' element={<LandingPage />} />
