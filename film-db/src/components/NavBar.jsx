@@ -7,11 +7,10 @@ import NavBarItem from './NavBarItem';
 import { useNavigate } from 'react-router-dom';
 
 
-function NavBar() {
+function NavBar({searchQuery, setSearchQuery}) {
     //Dropdown / hamburger menu
     const [toggle, setToggle] = useState(false);
     // Search bar
-    const [searchQuery, setSearchQuery] = useState('');
 
     // Navigate to the '/trending' route
     const navigate = useNavigate();
@@ -44,27 +43,30 @@ function NavBar() {
             icon:HiTv
         }
     ]
+    // console.log({searchQuery})
+
 
 return (
     <div className ='flex items-center justify-between p-5'>
     <div className ='flex gap-8 items-center' >
         <img src={Logo} className='w-[80px] md:w-[115px] object-cover' />
-    
+
         {menu.map((item, index) => (
         <Link to={item.path} key={index}>
             <NavBarItem name={item.name} Icon={item.icon} />
         </Link>
         ))}
+        
 
         <div className='flex md:hidden gap-5'>
-            {menu.map(( item, index ) => index < 3 && (
+            {/* {menu.map(( item, index ) => index < 4 && (
                 <NavBarItem key = {index} name={''} Icon={item.icon} />
-            ))}
+            ))} */}
             <div className='md:hidden' onClick={() => setToggle(!toggle)}>
 
-    
-                <NavBarItem  name={''} Icon={HiDotsVertical} />
-                
+
+            <NavBarItem  name={''} Icon={HiDotsVertical} />
+
             {toggle
                 ? <div className='absolute z-50 mt-3 bg-[#f5f4f4] border-[1px] border-gray-700 p-3 px-5 py-4'>
                     {menu.map((item,index) => index > 2 && (
@@ -81,8 +83,8 @@ return (
                 type='text'
                 placeholder='Search'
                 className='border-none rounded-md px-1 py-0 focus:outline-none mr-0 ' 
-                value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
+                value={searchQuery}
             />
             <img src="https://ps.w.org/user-avatar-reloaded/assets/icon-256x256.png?rev=2540745"
         className='w-[60px] rounded-full'/>
