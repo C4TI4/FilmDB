@@ -28,7 +28,7 @@ const App = () => {
       setFilms(responseData);
       // in browser console when u expand array, u find items which u need to get
       // u will not see console from browser. u need use useEffect.
-      return response;
+      // return response;
     } catch (error) {
       console.error(error.message);
     }

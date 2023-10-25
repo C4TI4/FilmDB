@@ -17,7 +17,7 @@ const RomanticFilmSection = ({films}) => {
           <div>
             <h2 className='text-3xl font-bold text-red-700'>Romance</h2>
             <FilmCarousel>
-              {filteredFilms?.map(film =>          
+              {filteredFilms.map(film =>          
                   <FilmCard key={crypto.randomUUID()} film={film}/>          
               )}
             </FilmCarousel>
