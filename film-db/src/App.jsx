@@ -49,11 +49,11 @@ return (
   {/* <Route path='' element={}/> */}
   <Route path='/' element={<LandingPage />} />
   <Route path='/trending' element={<TrendingPage films={films} />} />   
-  <Route path='*' element={<NotFound />} /> 
-  <Route path='login' element={<LoginPage />}/>
-  <Route path='signup' element= {<SignUpPage/>}/>
+  <Route path='/*' element={<NotFound />} /> 
+  <Route path='/login' element={<LoginPage />}/>
+  <Route path='/signup' element= {<SignUpPage/>}/>
   {/* <Route path='/:filmname' element= {<SingleFilmPage3/>}/> */}
-   
+  
 </Routes>
 <Footer/>
   </>
