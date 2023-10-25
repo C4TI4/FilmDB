@@ -3,6 +3,7 @@ import {Link} from "react-router-dom"
 import Logo from '../assets/Images/logo.png';
 import { HiHome, HiMagnifyingGlass, HiStar, HiPlayCircle, HiTv } from "react-icons/hi2";
 import { HiPlus,HiDotsVertical } from "react-icons/hi";
+import { FiLogIn, FiUserPlus } from 'react-icons/fi';
 import NavBarItem from './NavBarItem';
 import { useNavigate } from 'react-router-dom';
 
@@ -26,23 +27,28 @@ function NavBar({searchQuery, setSearchQuery}) {
         },
         {
             name:'WATCH LIST',
-            icon:HiPlus
+            icon:HiPlus,
+            path:'/*'
         },
         {
             name:'TRENDING',
             icon:HiStar,
             path: '/trending',
-            onClick: handleTrendingClick,
+            onClick: handleTrendingClick
         },
         {
             name:'MOVIES',
-            icon:HiPlayCircle
+            icon:HiPlayCircle,
+            path: '/trending',
         },
         {
             name:'SERIES',
-            icon:HiTv
+            icon:HiTv,
+            path:'/*'
         }
     ]
+
+    
     // console.log({searchQuery})
 
 
@@ -69,7 +75,7 @@ return (
 
             {toggle
                 ? <div className='absolute z-50 mt-3 bg-[#f5f4f4] border-[1px] border-gray-700 p-3 px-5 py-4'>
-                    {menu.map((item,index) => index > 2 && (
+                    {menu.map((item,index) => index < 4 && (
                         <NavBarItem key={index} name= {item.name} Icon={item.icon} />
                     ))}
             </div> 
@@ -77,7 +83,7 @@ return (
             </div> 
         </div>
     </div>
-    <div className='md:flex hidden items-center mb-0 '>
+    <div className='md:flex hidden items-center gap-3 mb-0 '>
     <HiMagnifyingGlass className='text-black right-2 top-1/2 transform -translate-y-1/2 mr-2  mt-4'  /> 
             <input
                 type='text'
@@ -86,6 +92,18 @@ return (
                 onChange={(e) => setSearchQuery(e.target.value)}
                 value={searchQuery}
             />
+            <Link to="/login"> 
+            
+                    <button className="text-black flex items-center gap-2text-[15px] font-semibold cursor-pointer hover:underline
+    underline-offset-8 mr-1 "><FiLogIn className="mr-1" />LOGIN</button>
+                
+                </Link>
+                
+                <Link to="/signup"> 
+                    <button className="text-black flex items-center gap-2 text-[15px] font-semibold cursor-pointer hover:underline
+    underline-offset-8 mr-1"><FiUserPlus className="mr-1" />SIGN UP</button>
+                
+                </Link>
             <img src="https://ps.w.org/user-avatar-reloaded/assets/icon-256x256.png?rev=2540745"
         className='w-[60px] rounded-full'/>
         </div>
