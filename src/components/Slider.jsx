@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
-import { client } from "../lib/contentfulClient";
+// import { client } from "../lib/contentfulClient";
 import Carousel from "./Carousel";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
@@ -29,28 +29,28 @@ const Slider = () => {
     setCarouselSlides(cleanSlides);
   }, []);
 
-  const getCarouselSlides = useCallback(async () => {
-    setIsCarouselLoading(true);
-    try {
-      const response = await client.getEntries({
-        content_type: "movieCarousel",
-      });
-      const responseData = response.items;
-      console.log(responseData);
-      if (responseData) {
-        cleanUpCarouselSlides(responseData);
-      } else {
-        setCarouselSlides([]);
-      }
-      setIsCarouselLoading(false);
-    } catch (error) {
-      console.error(error);
-      setIsCarouselLoading(false);
-    }
-  }, [cleanUpCarouselSlides]);
-  useEffect(() => {
-    getCarouselSlides();
-  }, [getCarouselSlides]);
+  // const getCarouselSlides = useCallback(async () => {
+  //   setIsCarouselLoading(true);
+  //   try {
+  //     const response = await client.getEntries({
+  //       content_type: "movieCarousel",
+  //     });
+  //     const responseData = response.items;
+  //     console.log(responseData);
+  //     if (responseData) {
+  //       cleanUpCarouselSlides(responseData);
+  //     } else {
+  //       setCarouselSlides([]);
+  //     }
+  //     setIsCarouselLoading(false);
+  //   } catch (error) {
+  //     console.error(error);
+  //     setIsCarouselLoading(false);
+  //   }
+  // }, [cleanUpCarouselSlides]);
+  // useEffect(() => {
+  //   getCarouselSlides();
+  // }, [getCarouselSlides]);
 
   return (
     <>
