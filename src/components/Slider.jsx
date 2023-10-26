@@ -53,35 +53,12 @@ const Slider = () => {
   //   getCarouselSlides();
   // }, [getCarouselSlides]);
   // -----------------------------------------------------------------------
-  const cleanUpCarouselSlides = useCallback((rawData) => {
-    const cleanSlides = rawData.map((slide) => {
-      const { id } = slide.movie_id;
-      const slideTitle = slide.title;
-      const slideDescription = slide.description;
-      const slideBg = slide.img_src;
-      const updatedSlide = { id, slideTitle, slideDescription, slideBg };
-      return updatedSlide;
-    });
 
-    setCarouselSlides(cleanSlides);
-  }, []);
   useEffect(() => {
     const getCarouselSlides = async () => {
-      try {
-        const response = await fetch("https://films-api.cyclic.app/films");
-        const responseData = await response.json();
-        const slicedMovies = responseData.slice(3, 14);
-        console.log(responseData);
-        if (responseData) {
-          cleanUpCarouselSlides(slicedMovies);
-        } else {
-          setCarouselSlides([]);
-        }
-        setIsCarouselLoading(false);
-      } catch (error) {
-        console.error(error);
-        setIsCarouselLoading(false);
-      }
+      const response = await fetch("https://films-api.cyclic.app/films");
+      const responseData = await response.json();
+      console.log(responseData);
     };
     getCarouselSlides();
   }, []);
