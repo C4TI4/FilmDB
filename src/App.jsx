@@ -35,7 +35,6 @@ const App = () => {
   //     console.error(error.message);
   //   }
   // };
-
   // useEffect(() => {getSlides()
   // }, [searchQuery])
   // console.log(films)'
