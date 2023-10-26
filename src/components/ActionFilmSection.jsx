@@ -6,7 +6,7 @@ const ActionFilmSection = ({films}) => {
     const [filteredFilms, setFilteredFilms] = useState([])
       
     useEffect(() => {
-      films.length && setFilteredFilms(films.filter(film => film.fields.genre === 'action'))  
+      films.length && setFilteredFilms(films.filter(film => film.genre === 'action'))  
     }, [films])      
 
     // const carStyle={background:"green", display:"block",marginTop:"300px"}
