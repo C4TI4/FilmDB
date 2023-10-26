@@ -1,24 +1,22 @@
-
-import { useState,useEffect} from 'react';
-import {Routes,Route} from "react-router-dom"
-import TrendingPage from './pages/TrendingPage';
+import { useState, useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
+import TrendingPage from "./pages/TrendingPage";
 import LandingPage from "./pages/LandingPage";
-import LoginPage from './pages/LoginPage';
-import SignUpPage from './pages/SignUpPage';
-import NotFound from './pages/NotFound.jsx';
-import NavBar from './components/NavBar';
-import Footer from './components/Footer';
+import LoginPage from "./pages/LoginPage";
+import SignUpPage from "./pages/SignUpPage";
+import NotFound from "./pages/NotFound.jsx";
+import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
 // import SingleFilmPage3 from './pages/SingleFilmPage3 ';
 // import client from "./lib/contentfulClient";
 // FilmCard is collection of all films in contentful
-import 'react-multi-carousel/lib/styles.css';
+import "react-multi-carousel/lib/styles.css";
 
 const App = () => {
   // const [CarouselLoading, setCarouselLoading]= useState(false)
   const [films, setFilms] = useState([]);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState("");
 
-  
   // // null or array?
   // const getSlides = async () => {
   //   try {
@@ -37,6 +35,7 @@ const App = () => {
   //     console.error(error.message);
   //   }
   // };
+
 
   const getSlides = async () => {
     try {
@@ -72,7 +71,7 @@ return (
 </Routes>
 <Footer/>
   </>
-  );
+);
 };
 
 export default App;
