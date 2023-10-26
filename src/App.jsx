@@ -1,5 +1,5 @@
 
-import { useState,useEffect} from 'react';
+import { useState, useEffect} from 'react';
 import {Routes,Route} from "react-router-dom"
 import TrendingPage from './pages/TrendingPage';
 import LandingPage from "./pages/LandingPage";
@@ -16,7 +16,7 @@ import 'react-multi-carousel/lib/styles.css';
 const App = () => {
   // const [CarouselLoading, setCarouselLoading]= useState(false)
   const [films, setFilms] = useState([]);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState(`${films}`);
 
   
   // // null or array?
@@ -37,7 +37,6 @@ const App = () => {
   //     console.error(error.message);
   //   }
   // };
-
   // useEffect(() => {getSlides()
   // }, [searchQuery])
   // console.log(films)'
