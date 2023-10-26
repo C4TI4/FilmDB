@@ -15,20 +15,21 @@ const Slider = () => {
   const [isCarouselLoading, setIsCarouselLoading] = useState(false);
   const [carouselSlides, setCarouselSlides] = useState([]);
 
-  const cleanUpCarouselSlides = useCallback((rawData) => {
-    const cleanSlides = rawData.map((slide) => {
-      const { sys, fields } = slide;
-      const { id } = sys;
-      const slideTitle = fields.title;
-      const slideDescription = fields.description;
-      const slideBg = fields.image.fields.file.url;
-      const updatedSlide = { id, slideTitle, slideDescription, slideBg };
-      return updatedSlide;
-    });
-
-    setCarouselSlides(cleanSlides);
-  }, []);
-
+  // when fetching from contentful
+  //   const cleanUpCarouselSlides = useCallback((rawData) => {
+  //     const cleanSlides = rawData.map((slide) => {
+  //       const { sys, fields } = slide;
+  //       const { id } = sys;
+  //       const slideTitle = fields.title;
+  //       const slideDescription = fields.description;
+  //       const slideBg = fields.image.fields.file.url;
+  //       const updatedSlide = { id, slideTitle, slideDescription, slideBg };
+  //       return updatedSlide;
+  //     });
+  //
+  //     setCarouselSlides(cleanSlides);
+  //   }, []);
+  // ------------------------------------------------------
   // const getCarouselSlides = useCallback(async () => {
   //   setIsCarouselLoading(true);
   //   try {
@@ -51,6 +52,16 @@ const Slider = () => {
   // useEffect(() => {
   //   getCarouselSlides();
   // }, [getCarouselSlides]);
+  // -----------------------------------------------------------------------
+
+  useEffect(() => {
+    const getCarouselSlides = async () => {
+      const response = await fetch("https://films-api.cyclic.app/films");
+      const responseData = await response.json();
+      console.log(responseData);
+    };
+    getCarouselSlides();
+  }, []);
 
   return (
     <>
