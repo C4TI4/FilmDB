@@ -15,6 +15,7 @@ const Slider = () => {
   const [isCarouselLoading, setIsCarouselLoading] = useState(false);
   const [carouselSlides, setCarouselSlides] = useState([]);
 
+  // when fetching from contentful
   //   const cleanUpCarouselSlides = useCallback((rawData) => {
   //     const cleanSlides = rawData.map((slide) => {
   //       const { sys, fields } = slide;
