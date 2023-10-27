@@ -6,7 +6,8 @@
 
 const FilmCard = ({ film }) => {
   const { fields } = film;
-  // console.log(filmName,imageSrc,year, genre);
+
+  // console.log(filmname,imageSrc,year, genre);
   // const imgStyle= {
   //     backgroundImage:`url(${fields?.imageSrc})`,
   //     minHeight:"200px",
