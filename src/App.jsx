@@ -8,8 +8,7 @@ import NotFound from "./pages/NotFound.jsx";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 // import SingleFilmPage3 from './pages/SingleFilmPage3 ';
-// import client from "./lib/contentfulClient";
-// FilmCard is collection of all films in contentful
+
 import "react-multi-carousel/lib/styles.css";
 
 const App = () => {
@@ -35,7 +34,6 @@ const App = () => {
   //     console.error(error.message);
   //   }
   // };
-
   // useEffect(() => {getSlides()
   // }, [searchQuery])
   // console.log(films)'

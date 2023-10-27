@@ -94,7 +94,7 @@ const Slider = () => {
         console.error(error);
         setIsCarouselLoading(false);
       }
-    };
+    }
     getCarouselSlides();
   }, []);
 
