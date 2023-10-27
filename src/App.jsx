@@ -39,7 +39,7 @@ const App = () => {
   // console.log(films)'
 
   // ---------------------------------------------
-  console.log(films);
+  // console.log(films);
 
   return (
     <>
