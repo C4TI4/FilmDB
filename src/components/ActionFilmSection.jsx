@@ -7,9 +7,10 @@ const ActionFilmSection = ({films}) => {
     // console.log(films)  ;
     // useEffect(() => {
     //   films.length && setFilteredFilms(films.filter(film => film.genre === 'action'))  
-    // }, [films])      
-    const filteredFilms= films.length>0 ? films.filter(film => film.genre === 'action'): [];
-   
+    // }, [films])    
+    console.log(films)  
+    const filteredFilms= films.length>0 ? films.filter(film => film.genre === 'Action'): [];
+    console.log(filteredFilms)
     // const carStyle={background:"green", display:"block",marginTop:"300px"}
     return (
       filteredFilms?.length > 0 &&

@@ -8,7 +8,7 @@ const ComedyFilmSection = ({films}) => {
   // useEffect(() => {
   //   films.length && setFilteredFilms(films.filter(film => film.fields.genre === 'comedy'))  
   // }, [films])
-  const filteredFilms= films.length>0 ? films.filter(film => film.genre === 'action'): [];
+  const filteredFilms= films.length>0 ? films.filter(film => film.genre === 'Comedy'): [];
   return (
     filteredFilms?.length > 0 &&
       <>

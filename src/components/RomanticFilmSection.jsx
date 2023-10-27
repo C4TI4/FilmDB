@@ -10,7 +10,7 @@ const RomanticFilmSection = ({films}) => {
       //   }, [films])
 
       // console.log(filteredFilms); 
-      const filteredFilms= films.length>0 ? films.filter(film => film.genre === 'action'): [];
+      const filteredFilms= films.length>0 ? films.filter(film => film.genre === 'Romance'): [];
       return (
         filteredFilms.length >0 &&
         <>
