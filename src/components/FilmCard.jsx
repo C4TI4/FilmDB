@@ -18,9 +18,9 @@ const FilmCard = ({ film }) => {
           className="object-cover h-96 rounded-xl overflow-hidden block mx-auto"
         />
       </figure>
-      <h2 className="text-3xl mt-4">{filmname}</h2>
-      <p className="text-xs text-white font-light ">{description}</p>
-      <p className="text-xs text-white font-light">{year}</p>
+      <h2 className="text-xl text-left mt-4">{filmname}</h2>
+      <p className="text-xs text-white text-left font-light ">{description}</p>
+      <p className="text-xs text-white text-left font-light">{year}</p>
     </div>
     // </link>
   );

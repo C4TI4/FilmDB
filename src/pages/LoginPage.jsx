@@ -41,10 +41,10 @@ const Login = () => {
         </div>
         <br />
         <div className='flex w-full'>
-          <button className='text-yellow-500 w-1/2 bg-accent hover:bg-info-content hover:border-info-content rounded-none text-white font-normal text-lg p-4 transition-none uppercase'>
+          <button className='text-white w-1/2 bg-accent hover:bg-info-content hover:border-info-content rounded-none text-white font-normal text-lg p-4 transition-none uppercase'>
             Sign Up
           </button>
-          <button className='text-yellow-500 w-1/2 bg-success hover:bg-success-content hover:border-success-content rounded-none text-white font-normal text-lg py-4 transition-none uppercase'>
+          <button className='text-white w-1/2 bg-success hover:bg-success-content hover:border-success-content rounded-none text-white font-normal text-lg py-4 transition-none uppercase'>
             Log in
           </button>
         </div>

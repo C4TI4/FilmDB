@@ -15,7 +15,7 @@ const TrendingPage = ({ films }) => {
   return (
     <>
       <div className='bg-black text-white' >
-      <h1 className='text-6xl font-bold text-yellow-500 ml-4 p-3 '>Trending</h1>
+      <h1 className='text-6xl font-bold text-red-700 ml-4 p-3 '>Trending</h1>
       <Trending films={films} />
       </div>
     </>
