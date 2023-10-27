@@ -3,12 +3,12 @@ import FilmCard from "./FilmCard";
 import FilmCarousel from "./FilmCarousel";
 
 const AnimeFilmSection = ({films}) => {
-  const [filteredFilms, setFilteredFilms] = useState([])
+  // const [filteredFilms, setFilteredFilms] = useState([])
     
-  useEffect(() => {
-    films.length && setFilteredFilms(films.filter(film => film.fields.genre === 'anime'))  
-  }, [films])
-    
+  // useEffect(() => {
+  //   films.length && setFilteredFilms(films.filter(film => film.fields.genre === 'anime'))  
+  // }, [films])
+  const filteredFilms= films.length>0 ? films.filter(film => film.genre === 'action'): [];  
   return (
     filteredFilms?.length >0 &&
       <>
