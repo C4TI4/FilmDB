@@ -1,5 +1,5 @@
 const FilmCard = ({ film }) => {
-  const {filmname, imagesrc, year, description}= film;
+  const {filmname, imagesrc, year}= film;
   // blue underlines r just spell check not error
   
   console.log(filmname, imagesrc, year);
@@ -19,8 +19,7 @@ const FilmCard = ({ film }) => {
         />
       </figure>
       <h2 className="text-xl text-left mt-4">{filmname}</h2>
-      <p className="text-xs text-white text-left font-light ">{description}</p>
-      <p className="text-xs text-white text-left font-light">{year}</p>
+      <p className="text-xs text-yellow-400 text-left font-light">{year}</p>
     </div>
     // </link>
   );
