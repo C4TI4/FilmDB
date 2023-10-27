@@ -5,8 +5,9 @@
 /* eslint-disable react/prop-types */
 
 const FilmCard = ({ film }) => {
+  const {filmname, imagesrc, year}= film;
   
-  // const { fields } = film;
+  // console.log(filmname,imagesrc,year, genre);
   
   // console.log(filmName,imageSrc,year, genre);
   // const imgStyle= {
@@ -25,13 +26,13 @@ const FilmCard = ({ film }) => {
         {/* <figure className='min-h-[100%] overflow-hidden bg-red' style={imgStyle}> */}
         {/* <figure className='h-[70%] overflow-hidden bg-red' style={{backgroundImage: `url(${fields?.imageSrc})`}}> */}
         <img
-          src={film?.imagesrc}
+          src={imagesrc}
           alt="film-poster"
           className="object-cover h-96 rounded-xl overflow-hidden block mx-auto"
         />
       </figure>
-      <h2 className="text-3xl mt-4">{film?.filmname}</h2>
-      <p className="text-xl text-black font-light">{film?.year}</p>
+      <h2 className="text-3xl mt-4">{filmname}</h2>
+      <p className="text-xl text-black font-light">{year}</p>
       {/* <div className='h-[70%] overflow-hidden bg-red' style={imgStyle}></div> */}
     </div>
     // </link>

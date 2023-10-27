@@ -19,6 +19,7 @@ const ActionFilmSection = ({films}) => {
           {filteredFilms?.map(film =>          
               <FilmCard key={crypto.randomUUID()} film={film}/>         
           )}
+          {/* these r {children} in film carousel component */}
         </FilmCarousel>
         </div>
       </>

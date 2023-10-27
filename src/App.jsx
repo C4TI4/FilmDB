@@ -39,7 +39,7 @@ const App = () => {
 
   const getSlides = async () => {
     try {
-      const response = await fetch("https://films-api.cyclic.app/films");
+      const response = await fetch(" https://films-api-0zaj.onrender.com/films");
       const responseData = await response.json();
       setFilms(responseData);
       // in browser console when u expand array, u find items which u need to get

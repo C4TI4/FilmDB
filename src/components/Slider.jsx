@@ -56,7 +56,7 @@ const Slider = () => {
 
   useEffect(() => {
     const getCarouselSlides = async () => {
-      const response = await fetch("https://films-api.cyclic.app/films");
+      const response = await fetch("https://films-api-0zaj.onrender.com/films");
       const responseData = await response.json();
       console.log(responseData);
     };
