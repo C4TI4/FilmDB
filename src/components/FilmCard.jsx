@@ -10,17 +10,20 @@ const FilmCard = ({ film }) => {
 
     // <Link to={`/${fields?.filmName}`}
     <div className="mx-4 mt-10 mb-16 hover:cursor-pointer hover:scale-[102%] transition-all duration-300 text-center">
-      <figure>
+      <figure >
     
         <img
           src={imagesrc}
           alt="film-poster"
-          className="object-cover h-96 rounded-xl overflow-hidden block mx-auto"
+          className="object-cover h-96 rounded-xl block mx-auto"
         />
       </figure>
+    
       <h2 className="text-xl text-left mt-4">{filmname}</h2>
+      <div className="group relative overflow-hidden opacity-0 hover:opacity-100 transition-opacity duration-300 ">
       <p className="text-xs text-white text-left font-light ">{description}</p>
-      <p className="text-xs text-white text-left font-light">{year}</p>
+      <p className="text-xs mt-2 text-white text-left font-light">{year}</p>
+      </div>
     </div>
     // </link>
   );

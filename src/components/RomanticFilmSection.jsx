@@ -1,4 +1,4 @@
-import {useEffect,useState} from 'react'
+// import {useEffect,useState} from 'react'
 import FilmCard from "./FilmCard";
 import FilmCarousel from "./FilmCarousel";
 
