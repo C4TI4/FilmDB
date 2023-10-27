@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+// import { useState, useEffect, useCallback } from "react";
 // import { client } from "../lib/contentfulClient";
 import Carousel from "./Carousel";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -11,11 +11,49 @@ import "swiper/scss/pagination";
 
 SwiperCore.use([Navigation]);
 
-const Slider = () => {
-  const [isCarouselLoading, setIsCarouselLoading] = useState(false);
-  const [carouselSlides, setCarouselSlides] = useState([]);
+const Slider = ({films}) => {
+  // const [isCarouselLoading, setIsCarouselLoading] = useState(false);
+  // const [carouselSlides, setCarouselSlides] = useState([]);
 
-  // when fetching from contentful
+
+
+  // useEffect(() => {
+  //   const getCarouselSlides = async () => {
+  //     const response = await fetch("https://films-api-0zaj.onrender.com/films");
+  //     const responseData = await response.json();
+  //     console.log("input data received:", responseData);
+  //   };
+  //   getCarouselSlides();
+  // }, []);
+
+  return (
+    <>
+      <div className="carousel">
+        <Swiper navigation>
+          {films.map((item) => {
+            // const { id, slideBg, slideTitle, slideDescription } = item;
+            return (
+              <SwiperSlide key={item.movie_id}>
+                <Carousel
+                  slideTitle={item.filmname}
+                  slideDescription={item.description}
+                  slideBg={item.imagesrc}
+                />
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+      </div>
+    </>
+  );
+};
+
+export default Slider;
+
+
+
+
+ // when fetching from contentful
   //   const cleanUpCarouselSlides = useCallback((rawData) => {
   //     const cleanSlides = rawData.map((slide) => {
   //       const { sys, fields } = slide;
@@ -53,36 +91,3 @@ const Slider = () => {
   //   getCarouselSlides();
   // }, [getCarouselSlides]);
   // -----------------------------------------------------------------------
-
-  useEffect(() => {
-    const getCarouselSlides = async () => {
-      const response = await fetch("https://films-api-0zaj.onrender.com/films");
-      const responseData = await response.json();
-      console.log(responseData);
-    };
-    getCarouselSlides();
-  }, []);
-
-  return (
-    <>
-      <div className="carousel">
-        <Swiper navigation>
-          {carouselSlides.map((item) => {
-            const { id, slideBg, slideTitle, slideDescription } = item;
-            return (
-              <SwiperSlide key={id}>
-                <Carousel
-                  slideTitle={slideTitle}
-                  slideDescription={slideDescription}
-                  slideBg={slideBg}
-                />
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
-      </div>
-    </>
-  );
-};
-
-export default Slider;
