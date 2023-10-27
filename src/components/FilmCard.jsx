@@ -6,6 +6,7 @@
 
 const FilmCard = ({ film }) => {
   const {filmname, imagesrc, year}= film;
+  // blue underlines r just spell check not error
   
   // console.log(filmname,imagesrc,year, genre);
   

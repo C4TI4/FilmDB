@@ -3,14 +3,14 @@ import FilmCard from "./FilmCard";
 import FilmCarousel from "./FilmCarousel";
 
 const RomanticFilmSection = ({films}) => {
-      const [filteredFilms, setFilteredFilms] = useState([])
+      // const [filteredFilms, setFilteredFilms] = useState([])
       
-      useEffect(() => {
-        films.length && setFilteredFilms(films.filter(film => film.fields.genre === 'romantic'))  
-        }, [films])
+      // useEffect(() => {
+      //   films.length && setFilteredFilms(films.filter(film => film.fields.genre === 'romantic'))  
+      //   }, [films])
 
-      console.log(filteredFilms); 
-
+      // console.log(filteredFilms); 
+      const filteredFilms= films.length>0 ? films.filter(film => film.genre === 'action'): [];
       return (
         filteredFilms.length >0 &&
         <>

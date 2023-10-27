@@ -3,12 +3,13 @@ import FilmCard from "./FilmCard";
 import FilmCarousel from "./FilmCarousel";
 
 const ActionFilmSection = ({films}) => {
-    const [filteredFilms, setFilteredFilms] = useState([])
-      
-    useEffect(() => {
-      films.length && setFilteredFilms(films.filter(film => film.genre === 'action'))  
-    }, [films])      
-
+    // const [filteredFilms, setFilteredFilms] = useState([])
+    // console.log(films)  ;
+    // useEffect(() => {
+    //   films.length && setFilteredFilms(films.filter(film => film.genre === 'action'))  
+    // }, [films])      
+    const filteredFilms= films.length>0 ? films.filter(film => film.genre === 'action'): [];
+   
     // const carStyle={background:"green", display:"block",marginTop:"300px"}
     return (
       filteredFilms?.length > 0 &&
