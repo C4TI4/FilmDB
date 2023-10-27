@@ -19,8 +19,8 @@ const FilmCard = ({ film }) => {
         />
       </figure>
       <h2 className="text-3xl mt-4">{filmname}</h2>
-      <p className="text-xl text-white font-light ">{description}</p>
-      <p className="text-xl text-white font-light">{year}</p>
+      <p className="text-xs text-white font-light ">{description}</p>
+      <p className="text-xs text-white font-light">{year}</p>
     </div>
     // </link>
   );
