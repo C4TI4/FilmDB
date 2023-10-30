@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import {Link} from "react-router-dom"
-import logo from '../assets/Images/logo.png';
+import logo from '../assets/images/Logo.png';
 import { HiHome, HiMagnifyingGlass, HiStar, HiPlayCircle, HiTv } from "react-icons/hi2";
 import { HiPlus,HiDotsVertical } from "react-icons/hi";
 import { FiLogIn, FiUserPlus } from 'react-icons/fi';
