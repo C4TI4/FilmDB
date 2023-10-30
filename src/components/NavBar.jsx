@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import {Link} from "react-router-dom"
-import logo from '../assets/Images/logo.png';
+// import logo from '../public/Logo.png';
 import { HiHome, HiMagnifyingGlass, HiStar, HiPlayCircle, HiTv } from "react-icons/hi2";
 import { HiPlus,HiDotsVertical } from "react-icons/hi";
 import { FiLogIn, FiUserPlus } from 'react-icons/fi';
@@ -55,7 +55,7 @@ function NavBar({searchQuery, setSearchQuery}) {
 return (
     <div className ='flex items-center justify-between p-5'>
     <div className ='flex gap-8 items-center' >
-        <img src={logo} className='w-[80px] md:w-[115px] object-cover' />
+        <img src="/Logo.png" className='w-[80px] md:w-[115px] object-cover' />
 
         {menu.map((item, index) => (
         <Link to={item.path} key={index}>
